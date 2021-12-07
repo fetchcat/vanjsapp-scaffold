@@ -1,0 +1,74 @@
+/* Import Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Variables and Mixins */
+
+$color1: #2b2d42;
+$color2: #e86a92;
+$color3: #f7e733;
+$color4: #f7f7f9;
+$color5: #41e2ba;
+
+@mixin flex-centered() {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-inline-column() {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* CSS Reset */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/*  */
+
+body {
+  font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
+  @include flex-inline-column;
+}
+
+header {
+  background-color: $color1;
+  color: $color4;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  padding: 20px 0px;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+button {
+  border: none;
+  padding: 10px;
+  color: #ffffff;
+  background-color: $color2;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  &:hover {
+    filter: brightness(110%);
+  }
+}
+
+.container {
+  @include flex-centered();
+}
+
+.image {
+  margin: 20px;
+}
